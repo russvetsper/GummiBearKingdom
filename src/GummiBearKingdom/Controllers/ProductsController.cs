@@ -25,5 +25,17 @@ namespace GummiBearKingdom.Controllers
             var thisProduct = db.Products.FirstOrDefault(ProductsController => ProductsController.ProductsId == id);
             return View(thisProduct);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Product product)
+        {
+            db.Products.Add(product);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
