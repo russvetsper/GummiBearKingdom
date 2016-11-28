@@ -13,7 +13,8 @@ namespace GummiBearKingdom.Models
         [Key]
         public int ProductsId { get; set; }
         public string Name { get; set; }
-        public string Cost { get; set; }
+        public int Cost { get; set; }
         public string Coo{ get; set; }
+        public virtual ICollection<Blog> Blogs { get; set; }
     }
 }
