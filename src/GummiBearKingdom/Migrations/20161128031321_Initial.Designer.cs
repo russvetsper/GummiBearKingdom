@@ -8,8 +8,8 @@ using GummiBearKingdom.Models;
 namespace GummiBearKingdom.Migrations
 {
     [DbContext(typeof(GummiBearKingdomContext))]
-    [Migration("20161128022943_MakeTableNamesPlural")]
-    partial class MakeTableNamesPlural
+    [Migration("20161128031321_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
