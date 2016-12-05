@@ -11,10 +11,10 @@ namespace GummiBearKingdom.Models
     public class Product
     {
         [Key]
-        public int ProductsId { get; set; }
+        public int ProductId { get; set; }
         public string Name { get; set; }
         public int Cost { get; set; }
         public string Coo{ get; set; }
-        public virtual ICollection<Blog> Blogs { get; set; }
+        
     }
 }

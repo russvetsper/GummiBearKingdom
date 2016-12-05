@@ -8,7 +8,7 @@ using GummiBearKingdom.Models;
 namespace GummiBearKingdom.Migrations
 {
     [DbContext(typeof(GummiBearKingdomContext))]
-    [Migration("20161205204415_Initial")]
+    [Migration("20161205211351_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,22 +24,18 @@ namespace GummiBearKingdom.Migrations
 
                     b.Property<string>("Author");
 
-                    b.Property<int?>("ProductsId");
-
                     b.Property<string>("Text");
 
                     b.Property<string>("Title");
 
                     b.HasKey("BlogId");
 
-                    b.HasIndex("ProductsId");
-
                     b.ToTable("Blogs");
                 });
 
             modelBuilder.Entity("GummiBearKingdom.Models.Product", b =>
                 {
-                    b.Property<int>("ProductsId")
+                    b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Coo");
@@ -48,16 +44,9 @@ namespace GummiBearKingdom.Migrations
 
                     b.Property<string>("Name");
 
-                    b.HasKey("ProductsId");
+                    b.HasKey("ProductId");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("GummiBearKingdom.Models.Blog", b =>
-                {
-                    b.HasOne("GummiBearKingdom.Models.Product")
-                        .WithMany("Blogs")
-                        .HasForeignKey("ProductsId");
                 });
         }
     }

@@ -22,7 +22,7 @@ namespace GummiBearKingdom.Controllers
         // GET: /<controller>/
         public IActionResult Details(int id)
         {
-            var thisProduct = db.Products.FirstOrDefault(ProductsController => ProductsController.ProductsId == id);
+            var thisProduct = db.Products.FirstOrDefault(ProductsController => ProductsController.ProductId == id);
             return View(thisProduct);
         }
         public IActionResult Create()
