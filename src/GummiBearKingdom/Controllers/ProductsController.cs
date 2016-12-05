@@ -26,6 +26,8 @@ namespace GummiBearKingdom.Controllers
             var thisProduct = db.Products.FirstOrDefault(ProductsController => ProductsController.ProductId == id);
             return View(thisProduct);
         }
+
+
         public IActionResult Create()
         {
             return View();
@@ -39,11 +41,14 @@ namespace GummiBearKingdom.Controllers
             return RedirectToAction("Index");
         }
 
+
+
         public IActionResult Edit(int id)
         {
-            var thisProduct = db.Products.FirstOrDefault(ProductsController => ProductsController.ProductId == id);
-            return View(thisProduct);
+            var thisItem = db.Products.FirstOrDefault(products => products.ProductId == id);
+            return View(thisItem);
         }
+
         [HttpPost]
         public IActionResult Edit(Product product)
         {
@@ -51,5 +56,8 @@ namespace GummiBearKingdom.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
+
     }
 }
