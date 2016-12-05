@@ -1,8 +1,7 @@
-﻿<html>
-<head>
-    <title>Gummi Bear Kingdom</title>
-</head>
-<body>
+﻿@{
+    ViewData["Title"] = "Gummi Bear Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
     <h2> Gummi Bear Kingdom!</h2>
-</body>
-</html>
+
+<p>@Html.ActionLink("Products", "Products")</p>

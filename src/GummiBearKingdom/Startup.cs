@@ -9,14 +9,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore;
 using GummiBearKingdom.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace GummiBearKingdom
 {
     public class Startup
     {
-
         public IConfigurationRoot Configuration { get; set; }
         public Startup(IHostingEnvironment env)
         {
@@ -39,13 +38,8 @@ namespace GummiBearKingdom
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -53,10 +47,11 @@ namespace GummiBearKingdom
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
+           
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("ERROR");
+                await context.Response.WriteAsync("Error");
             });
         }
     }
