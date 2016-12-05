@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GummiBearKingdom.Models
 {
-    [Table("Blog")]
+    [Table("Blogs")]
     public class Blog
     {
         [Key]

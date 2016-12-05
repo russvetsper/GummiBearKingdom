@@ -33,7 +33,7 @@ namespace GummiBearKingdom.Migrations
 
                     b.HasIndex("ProductsId");
 
-                    b.ToTable("Blog");
+                    b.ToTable("Blogs");
                 });
 
             modelBuilder.Entity("GummiBearKingdom.Models.Product", b =>

@@ -25,7 +25,7 @@ namespace GummiBearKingdom.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Blog",
+                name: "Blogs",
                 columns: table => new
                 {
                     BlogId = table.Column<int>(nullable: false)
@@ -37,9 +37,9 @@ namespace GummiBearKingdom.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Blog", x => x.BlogId);
+                    table.PrimaryKey("PK_Blogs", x => x.BlogId);
                     table.ForeignKey(
-                        name: "FK_Blog_Products_ProductsId",
+                        name: "FK_Blogs_Products_ProductsId",
                         column: x => x.ProductsId,
                         principalTable: "Products",
                         principalColumn: "ProductsId",
@@ -47,15 +47,15 @@ namespace GummiBearKingdom.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Blog_ProductsId",
-                table: "Blog",
+                name: "IX_Blogs_ProductsId",
+                table: "Blogs",
                 column: "ProductsId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Blog");
+                name: "Blogs");
 
             migrationBuilder.DropTable(
                 name: "Products");

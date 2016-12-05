@@ -8,7 +8,7 @@ using GummiBearKingdom.Models;
 namespace GummiBearKingdom.Migrations
 {
     [DbContext(typeof(GummiBearKingdomContext))]
-    [Migration("20161128031321_Initial")]
+    [Migration("20161205204415_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,7 +34,7 @@ namespace GummiBearKingdom.Migrations
 
                     b.HasIndex("ProductsId");
 
-                    b.ToTable("Blog");
+                    b.ToTable("Blogs");
                 });
 
             modelBuilder.Entity("GummiBearKingdom.Models.Product", b =>
