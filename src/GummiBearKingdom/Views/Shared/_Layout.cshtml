@@ -15,8 +15,37 @@
     <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
-    <div>
-        @RenderBody()
-    </div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Gummi Bear Kingdom!</h1>
+            <section>
+                <ul id="services">
+                    <li>
+                        <div>
+                            <span>@Html.ActionLink("Products", "Index", "Products")</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span>@Html.ActionLink("index", "Index", "Home")</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span>Blog</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span>@Html.ActionLink("AddProduct", "Create","Products")</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div>
+            </div>
+            @RenderBody()
+        </div>
 </body>
 </html>

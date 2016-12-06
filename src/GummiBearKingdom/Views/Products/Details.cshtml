@@ -1,4 +1,9 @@
-﻿@model GummiBearKingdom.Models.Product
+﻿@{
+    ViewData["Title"] = "Gummi Bear Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model GummiBearKingdom.Models.Product
 
 <html>
 <head>
@@ -7,9 +12,12 @@
 <body>
     <h1>Details</h1>
     <hr />
-          @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
-    <br />@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)
-    <br />@Html.DisplayNameFor(model => model.Coo): @Html.DisplayFor(model => model.Coo)
+    <div style="color:white;">
+        <h2>  @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h2>
+            <br /> 
+                <h2>@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)</h2>
+                    <br /><h2> @Html.DisplayNameFor(model => model.Coo): @Html.DisplayFor(model => model.Coo)</h2>
+</div>
     <p>@Html.ActionLink("Back to list", "Index")</p>
 </body>
 </html>

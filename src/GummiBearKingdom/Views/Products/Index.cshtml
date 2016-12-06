@@ -10,14 +10,19 @@
     <title>GummiBearKingdom</title>
 </head>
 <body>
-    <h1>Gummi Bear Kingdom Gummies</h1>
+   
     <ul>
-                @foreach (var listProduct in Model)
-                {
-                    <li>@Html.DisplayFor(modelItem => listProduct.Name) @Html.ActionLink("Details", "Details", new { id = listProduct.ProductId })|@Html.ActionLink("Edit", "Edit", new { id = listProduct.ProductId }) |@Html.ActionLink("Delete", "Delete", new { id = listProduct.ProductId })</li>
+        @foreach (var listProduct in Model)
+        {
+            <li><h2>@Html.DisplayFor(modelItem => listProduct.Name)</h2> @Html.ActionLink("Details", "Details", new { id = listProduct.ProductId })|@Html.ActionLink("Edit", "Edit", new { id = listProduct.ProductId }) |@Html.ActionLink("Delete", "Delete", new { id = listProduct.ProductId })</li>
         }
     </ul>
 
     <p>@Html.ActionLink("AddProduct", "Create")</p>
-</body>
+
+    
+         
+ </body>  
+            
+
 </html>

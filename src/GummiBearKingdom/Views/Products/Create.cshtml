@@ -1,26 +1,33 @@
-﻿@model GummiBearKingdom.Models.Product
+﻿@{
+    ViewData["Title"] = "Gummi Bear Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-<h2>Create</h2>
+@model GummiBearKingdom.Models.Product
+
+<h1>Create</h1>
 <hr />
-<h4>Add a new Product</h4>
-
+<h2>Add a new Product</h2>
+<br />
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
-   
+ <h2>   @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)</h2>
 
-        @Html.LabelFor(model => model.Cost)
-        @Html.TextBoxFor(model => model.Cost)
-        
-      
 
-        @Html.LabelFor(model => model.Coo)
-        @Html.TextBoxFor(model => model.Coo)
+        <h2>
+            @Html.LabelFor(model => model.Cost)
+            @Html.TextBoxFor(model => model.Cost)</h2>
 
 
 
-    <input type="submit" value="Create" />
+                <h2>
+                    @Html.LabelFor(model => model.Coo)
+                    @Html.TextBoxFor(model => model.Coo)</h2>
 
-}
+
+
+                        <input type="submit" value="Create" />
+
+                        }
