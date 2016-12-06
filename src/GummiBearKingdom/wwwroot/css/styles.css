@@ -67,6 +67,7 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
 	   font-size:0.00;
        font-family: Arial, Helvetica, sans-serif;
 	   text-align: center;
+       box-shadow: -3px -3px 3px 2px grey;
 	}
       section #services li div:hover {
 	width: 250px;
