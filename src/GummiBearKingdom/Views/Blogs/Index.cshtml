@@ -14,23 +14,29 @@
     <ul>
         @foreach (var listBlog in Model)
         {
-            <li><h2>TITLE:
+            <li>
+                <h2>
+                    TITLE:
                     <br />
-                @Html.DisplayFor(modelBlog => listBlog.Title)
+                    @Html.DisplayFor(modelBlog => listBlog.Title)
                     <br />
                     <br />
-                  AUTHOR:
-                    
+                    AUTHOR:
+
                     <br />
-                  @Html.DisplayFor(modelBlog => listBlog.Author)
-                <br />
+                    @Html.DisplayFor(modelBlog => listBlog.Author)
                     <br />
-                COMMENT: 
+                    <br />
+                    COMMENT:
                     <br />
                     @Html.DisplayFor(modelBlog => listBlog.Text)
-                <hr />
-            </h2></li>
+                    <br /><br />
+                    @Html.ActionLink("Edit", "Edit", new { id = listBlog.BlogId }) | @Html.ActionLink("Delete", "Delete", new { id = listBlog.BlogId })
+                    <hr />
+                </h2>
+            </li>
         }
+
 
         <p>@Html.ActionLink("Add Comment", "Create")</p>
     </ul>
