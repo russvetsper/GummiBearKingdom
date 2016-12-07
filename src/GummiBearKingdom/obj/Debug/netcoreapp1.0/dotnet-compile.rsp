@@ -198,6 +198,7 @@
 --resource:"C:\Users\russ\Desktop\GummiBearKingdom\src\GummiBearKingdom\obj\Debug\netcoreapp1.0\GummiBearKingdomdotnet-compile.deps.json",GummiBearKingdom.deps.json
 C:\Users\russ\Desktop\GummiBearKingdom\src\GummiBearKingdom\Program.cs
 C:\Users\russ\Desktop\GummiBearKingdom\src\GummiBearKingdom\Startup.cs
+C:\Users\russ\Desktop\GummiBearKingdom\src\GummiBearKingdom\Controllers\BlogsController.cs
 C:\Users\russ\Desktop\GummiBearKingdom\src\GummiBearKingdom\Controllers\HomeController.cs
 C:\Users\russ\Desktop\GummiBearKingdom\src\GummiBearKingdom\Controllers\ProductsController.cs
 C:\Users\russ\Desktop\GummiBearKingdom\src\GummiBearKingdom\Migrations\20161205211351_Initial.cs

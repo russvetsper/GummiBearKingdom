@@ -12,7 +12,7 @@ namespace GummiBearKingdom.Controllers
         private GummiBearKingdomContext db = new GummiBearKingdomContext();
         public IActionResult Index()
         {
-            return View();
+            return View(db.Blogs.ToList());
         }
     }
 }
