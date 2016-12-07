@@ -12,22 +12,26 @@
 
 @using (Html.BeginForm())
 {
- <h2>   @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)</h2>
+    <h2>
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+    </h2>
 
 
-        <h2>
-            @Html.LabelFor(model => model.Cost)
-            @Html.TextBoxFor(model => model.Cost)</h2>
-
-
-
-                <h2>
-                    @Html.LabelFor(model => model.Coo)
-                    @Html.TextBoxFor(model => model.Coo)</h2>
+    <h2>
+        @Html.LabelFor(model => model.Cost)
+        @Html.TextBoxFor(model => model.Cost)
+    </h2>
 
 
 
-                        <input type="submit" value="Create" />
+    <h2>
+        @Html.LabelFor(model => model.Coo)
+        @Html.TextBoxFor(model => model.Coo)
+    </h2>
 
-                        }
+
+
+<input type="submit" value="Create" />
+
+}

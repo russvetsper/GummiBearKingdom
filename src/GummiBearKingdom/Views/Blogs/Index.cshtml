@@ -1,4 +1,9 @@
-﻿@model IEnumerable<GummiBearKingdom.Models.Blog>
+﻿@{
+    ViewData["Title"] = "Gummi Bear Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<GummiBearKingdom.Models.Blog>
 
 <html>
 <head>
@@ -9,9 +14,21 @@
     <ul>
         @foreach (var listBlog in Model)
         {
-            <li><h2>@Html.DisplayFor(modelBlog => listBlog.Title)
-                    @Html.DisplayFor(modelBlog => listBlog.Author)
+            <li><h2>TITLE:
+                    <br />
+                @Html.DisplayFor(modelBlog => listBlog.Title)
+                    <br />
+                    <br />
+                  AUTHOR:
+                    
+                    <br />
+                  @Html.DisplayFor(modelBlog => listBlog.Author)
+                <br />
+                    <br />
+                COMMENT: 
+                    <br />
                     @Html.DisplayFor(modelBlog => listBlog.Text)
+                <hr />
             </h2></li>
         }
     </ul>
